@@ -5,7 +5,7 @@ module ha(a,b,s,c);
   input  a,b;
   output  s,c;
   
-  assign s = a ^ b; //SUM = XOR OF 2 INPUTS
+  assign s = a ^ b; //SUM = XOR OF 2 INPUTS , CONT. ASSIGNMENT STATEMENTS 
   assign c = a*b; //CARRY = A AND B
   
 endmodule  
