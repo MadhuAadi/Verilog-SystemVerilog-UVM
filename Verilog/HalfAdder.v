@@ -18,7 +18,7 @@ module tb;
   
   ha dut(a,b,s,c); // INSTANTIATION OF DESIGN IN TB 
   
-  initial begin
+  initial begin  // INITIAL -> EXECUTED ONLY USE AND STARTS AT TIME 0 
     $monitor("a = %d b = %d , sum = %d , carry = %d, %t",a,b,s,c, $time); // $MONITOR- SIGNALS ARE PRINTED EACH TIME ONE OF THEIR VALUE CHANGES 
     #5;
     a =  0; b=0;
@@ -32,7 +32,7 @@ module tb;
   end
   
   initial begin
-    $dumpfile("tb.vcd");      // CREATING A DUMPFILE TO STORE SIMULATED DATA
+    $dumpfile("tb.vcd");      // CREATING A DUMPFILE TO STORE SIMULATED DATA, MAINLY FOR WAVEFORM VIEW 
     $dumpvars();              // DEFINES THE SIGNALS TO BE ADDED TO THE DUMPFILE
   end
 endmodule
