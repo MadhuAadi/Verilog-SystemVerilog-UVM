@@ -1,5 +1,5 @@
 
-// Code your design here
+// DESIGN
 module ha(a,b,s,c);
   
   input  a,b;
@@ -11,7 +11,7 @@ module ha(a,b,s,c);
 endmodule  
 
 
-// Code your testbench here
+// TESTBENCH
 module tb;
    reg a,b;
    wire s,c;
