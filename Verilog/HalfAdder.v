@@ -5,8 +5,8 @@ module ha(a,b,s,c);
   input  a,b;
   output  s,c;
   
-  assign s = a ^ b;
-  assign c = a*b;
+  assign s = a ^ b; //SUM = XOR OF 2 INPUTS
+  assign c = a*b; //CARRY = A AND B
   
 endmodule  
 
@@ -16,7 +16,7 @@ module tb;
    reg a,b;
    wire s,c;
   
-  ha dut(a,b,s,c);
+  ha dut(a,b,s,c); // INSTANTIATION OF DESIGN IN TB 
   
   initial begin
     $monitor("a = %d b = %d , sum = %d , carry = %d, %t",a,b,s,c, $time);
@@ -32,7 +32,7 @@ module tb;
   end
   
   initial begin
-    $dumpfile("tb.vcd");
+    $dumpfile("tb.vcd");      
     $dumpvars();
   end
 endmodule
