@@ -1,5 +1,5 @@
 
-// DESIGN
+// DESIGN - DATA FLOW MODELLING 
 module ha(a,b,s,c);
   
   input  a,b;
