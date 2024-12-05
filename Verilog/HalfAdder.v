@@ -44,4 +44,4 @@ a = 0 b = 0 , sum = 0 , carry = 0,                    5
 a = 0 b = 1 , sum = 1 , carry = 0,                   10
 a = 1 b = 0 , sum = 1 , carry = 0,                   15
 a = 1 b = 1 , sum = 0 , carry = 1,                   20
-a = 0 b = 0 , sum = 0 , carry = 0,                   30
+
