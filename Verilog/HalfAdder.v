@@ -5,7 +5,7 @@ module ha(a,b,s,c);
   input  a,b;
   output  s,c;
   
-  assign s = a ^ b; //SUM = XOR OF 2 INPUTS , CONT. ASSIGNMENT STATEMENTS 
+  assign s = a ^ b; //SUM = XOR OF 2 INPUTS , ASSIGN KEYWORD -> CONT. ASSIGNMENT STATEMENTS 
   assign c = a*b; //CARRY = A AND B
   
 endmodule  
@@ -19,7 +19,7 @@ module tb;
   ha dut(a,b,s,c); // INSTANTIATION OF DESIGN IN TB 
   
   initial begin
-    $monitor("a = %d b = %d , sum = %d , carry = %d, %t",a,b,s,c, $time);
+    $monitor("a = %d b = %d , sum = %d , carry = %d, %t",a,b,s,c, $time); // $MONITOR- SIGNALS ARE PRINTED EACH TIME ONE OF THEIR VALUE CHANGES 
     #5;
     a =  0; b=0;
     #5;
@@ -32,8 +32,8 @@ module tb;
   end
   
   initial begin
-    $dumpfile("tb.vcd");      
-    $dumpvars();
+    $dumpfile("tb.vcd");      // CREATING A DUMPFILE TO STORE SIMULATED DATA
+    $dumpvars();              // DEFINES THE SIGNALS TO BE ADDED TO THE DUMPFILE
   end
 endmodule
 
